@@ -75,7 +75,7 @@ func (dp *DatabaseProvider) SelectHello() (string, error) {
 	return msg, nil
 }
 func (dp *DatabaseProvider) InsertHello(msg string) error {
-	_, err := dp.db.Exec("INSERT INTO hello (message) VALUES ($1)", msg)
+	_, err := dp.db.Exec("INSERT INTO public.hello (message) VALUES (ARRAY[$1])", msg)
 	if err != nil {
 		return err
 	}
