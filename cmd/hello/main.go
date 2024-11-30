@@ -15,7 +15,7 @@ const (
 	host     = "localhost"
 	port     = 5432
 	user     = "postgres"
-	password = "postgres"
+	password = "1234"
 	dbname   = "sandbox"
 )
 
@@ -115,3 +115,7 @@ func main() {
 		log.Fatal(err)
 	}
 }
+
+//curl -X POST -H "Content-Type: application/json" -d '{"msg": "Привет, мир!"}' http://127.0.0.1:8081/post
+
+//curl -X GET http://127.0.0.1:8081/get
