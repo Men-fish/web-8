@@ -83,3 +83,5 @@ func main() {
 		log.Fatalf("Failed to start server: %v", err)
 	}
 }
+// curl "http://localhost:8083/api/user?name=Men-fish"
+// INSERT INTO public.users (name) VALUES ('Men-fish');
